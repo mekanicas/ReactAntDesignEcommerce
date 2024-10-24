@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Layout } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import Sidebar from './components/Sidebar.jsx';
+import MainContent from './components/MainContent.jsx';
+import SideContent from './components/SideContent.jsx';
 import CustomHeader from './components/Header.jsx';
 import './App.css';
 
@@ -30,7 +32,12 @@ const App = () => {
       <Header className='header'>
         <CustomHeader />
       </Header>
-        <Content className='content'></Content>
+        <Content className='content'>
+          <Flex gap="large">
+            <MainContent />
+            <SideContent />
+          </Flex>
+        </Content>
     </Layout>
   </Layout>
   )
